@@ -9,7 +9,7 @@ module MdTemplateHandler
     def self.call(template)
       source = erb.call(template)
       <<-SOURCE
-    renderer = Redcarpet::Render::HTML.new(hard_wrap: true)
+    renderer = Redcarpet::Render::HTML.new
     options = {
       autolink: true,
       no_intra_emphasis: true,
